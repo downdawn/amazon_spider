@@ -7,7 +7,7 @@
 
 from scrapy import signals
 import random
-from stock.user_agents import user_agents
+from amazon.user_agents import user_agents
 import logging
 
 
