@@ -60,7 +60,7 @@ class YmxSpider(scrapy.Spider):
             else:
                 item["comment_count"] = '暂无评论'
             # print(item)
-            yield item
+#             yield item
 
         #下一页
         next_url = response.xpath("//a[@id='pagnNextLink']/@href").extract_first()
@@ -71,6 +71,7 @@ class YmxSpider(scrapy.Spider):
                 callback=self.parse_detial,
                 meta={"item": item}
             )
+        yield item
 
 
 
